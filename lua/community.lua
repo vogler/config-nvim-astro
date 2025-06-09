@@ -23,11 +23,13 @@ return {
 
   { import = "astrocommunity.media.vim-wakatime" },
   -- { import = "astrocommunity.color.headlines-nvim" },
+
   -- { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.peek-nvim" }, -- :PeekOpen: Error: module not found
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+
   -- { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.file-explorer.oil-nvim" }, -- <Leader>O
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
@@ -66,7 +68,7 @@ return {
 
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
-  { import = "astrocommunity.utility.nvim-toggler" },
+  -- { import = "astrocommunity.utility.nvim-toggler" }, -- <Leadeer>i to toggle word under cursor (defaults: true/false, yes/no, on/off, enable/disable, left/right, up/down, !=/==)
   { import = "astrocommunity.editing-support.dial-nvim" },
   { import = "astrocommunity.editing-support.vim-move" },
   -- { import = "astrocommunity.motion.mini-move" }, -- alternative to the above?
