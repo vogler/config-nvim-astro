@@ -35,11 +35,29 @@ return {
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 
+  -- can stage hunks/buffer with <Leader>gs/S or via lazygit, but commit in lazygit is not great since the commit modal covers the staged changes; see https://github.com/jesseduffield/lazygit/discussions/4433#discussioncomment-13393080
+  -- was using https://github.com/tpope/vim-fugitive in my old .vimrc with the following:
+    -- " just commit what is already staged
+    -- nmap <leader>c :Git commit -v --quiet<cr>
+    -- " stage file and commit
+    -- nmap <leader>C :Gwrite<cr>:Git commit -v --quiet<cr>
+  -- vim-fugitive is not available in astrocommunity (only lua)
+  -- nice overview of options: https://github.com/sindrets/diffview.nvim/blob/main/USAGE.md#committing
+  -- want: commit tab with message top left, git log bottom left, changes right
+
+  -- https://github.com/pwntester/octo.nvim GitHub issues/PRs
   { import = "astrocommunity.git.octo-nvim" }, -- <Leader>O
-  { import = "astrocommunity.git.neogit" }, -- <Leader>gn
-  { import = "astrocommunity.git.fugit2-nvim" }, -- <Leader>gF; but also adds <Leader>gn for new commit
-  { import = "astrocommunity.git.diffview-nvim" }, -- :DiffviewOpen
+  -- https://github.com/NeogitOrg/neogit :Neogit has nice status tab, commit tab has split w/ message on top and changes on bottom
+  { import = "astrocommunity.git.neogit" }, -- <Leader>gnt for default status tab (:Neogit), <Leader>gnc for commit page
+  -- https://github.com/SuperBo/fugit2.nvim by default uses floating window with branches, files, and commits - has nice menus and hotkeys, but not that great to use due to small UI and too many keys to press; prefer tab like diffview.nvim but preferably with git log to see/search commit messages
+  -- https://github.com/SuperBo/fugit2.nvim/wiki/%E2%8C%A8%EF%B8%8F-Usage-and-Keymap
+  -- { import = "astrocommunity.git.fugit2-nvim" }, -- <Leader>gF; but also adds <Leader>gn for new commit
+  -- https://github.com/sindrets/diffview.nvim
+  { import = "astrocommunity.git.diffview-nvim" }, -- :DiffviewOpen, :DiffviewFileHistory %
+  -- https://github.com/isakbm/gitgraph.nvim
   { import = "astrocommunity.git.gitgraph-nvim" }, -- <Leader>g| - uses diffview
+  -- https://github.com/chrisgrieser/nvim-tinygit some nice ideas, but UI not great
+  -- { import = "astrocommunity.git.nvim-tinygit" }, -- <Leader>gn for new smart commit, <Leader>gP for push
 
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
