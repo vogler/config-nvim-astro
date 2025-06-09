@@ -28,7 +28,8 @@ return {
   -- { import = "astrocommunity.markdown-and-latex.peek-nvim" }, -- :PeekOpen: Error: module not found
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
-  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  -- https://github.com/OXY2DEV/markview.nvim normal-mode/hybrid/split preview for Markdown, Typst, LaTeX, HTML
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" }, -- :Markview (no subcmd: Toggle = preview globally), toggle (only buffer) splitToggle (preview in right vsplit), HybridDisable (disable hybrid mode (disables preview for node/line under cursor) since it changes indentation when moving around, w/o it will just show the raw text inline with the preview (no preview in insert mode anyway))
 
   -- { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.file-explorer.oil-nvim" }, -- <Leader>O
