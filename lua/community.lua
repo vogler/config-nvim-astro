@@ -34,7 +34,13 @@ return {
   { import = "astrocommunity.editing-support.mini-splitjoin" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
-  -- { import = "astrocommunity.git.octo-nvim" }, -- <Leader>O
+
+  { import = "astrocommunity.git.octo-nvim" }, -- <Leader>O
+  { import = "astrocommunity.git.neogit" }, -- <Leader>gn
+  { import = "astrocommunity.git.fugit2-nvim" }, -- <Leader>gF; but also adds <Leader>gn for new commit
+  { import = "astrocommunity.git.diffview-nvim" }, -- :DiffviewOpen
+  { import = "astrocommunity.git.gitgraph-nvim" }, -- <Leader>g| - uses diffview
+
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
   { import = "astrocommunity.utility.nvim-toggler" },
