@@ -85,6 +85,9 @@ return {
   -- { import = "astrocommunity.motion.portal-nvim" }, -- <Leader>o and i to show preview portal of where to jump
   { import = "astrocommunity.motion.tabout-nvim" }, -- <Tab> and <S-Tab> in insert mode to tab out from parens, quotes etc.
 
+  -- https://github.com/Zeioth/garbage-day.nvim Garbage collector that stops inactive LSP clients to free RAM
+  { import = "astrocommunity.lsp.garbage-day-nvim" },
+
   -- { import = "astrocommunity.pack.bash" },
   -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.json" },
