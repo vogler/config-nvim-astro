@@ -59,6 +59,11 @@ return {
   -- https://github.com/chrisgrieser/nvim-tinygit some nice ideas, but UI not great
   -- { import = "astrocommunity.git.nvim-tinygit" }, -- <Leader>gn for new smart commit, <Leader>gP for push
 
+  -- https://github.com/Zeioth/compiler.nvim also uses overseer, but has defaults to run file/program for many languages, and nice UI with trace with adjustable detail
+  { import = "astrocommunity.code-runner.compiler-nvim" }, -- :CompilerOpen, :CompilerRedo, :CompilerToggleResults
+  -- https://github.com/stevearc/overseer.nvim more basic? no language defaults, just lists e.g. npm run scripts, but has watch mode to rerun task on save
+  { import = "astrocommunity.code-runner.overseer-nvim" }, -- <Leader>M for :Overseer{Toggle,RunCmd,Run,QuickAction,TaskAction,Info}
+
   { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
   { import = "astrocommunity.utility.nvim-toggler" },
