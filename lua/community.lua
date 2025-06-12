@@ -58,7 +58,7 @@ return {
   -- https://github.com/sindrets/diffview.nvim
   { import = "astrocommunity.git.diffview-nvim" }, -- :DiffviewOpen, :DiffviewFileHistory %
   -- https://github.com/isakbm/gitgraph.nvim
-  { import = "astrocommunity.git.gitgraph-nvim" }, -- <Leader>g| - uses diffview
+  -- { import = "astrocommunity.git.gitgraph-nvim" }, -- <Leader>g| - uses diffview for commits, but can't use like this since it replaces buffer instead of opening a float; also neogit's log graph is basically the same except that it doesn't use diffview, i.e. no syntax highlighting
   -- https://github.com/chrisgrieser/nvim-tinygit some nice ideas, but UI not great
   -- { import = "astrocommunity.git.nvim-tinygit" }, -- <Leader>gn for new smart commit, <Leader>gP for push
 
