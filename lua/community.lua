@@ -36,7 +36,7 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.file-explorer.oil-nvim" }, -- <Leader>O
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
-  { import = "astrocommunity.editing-support.mini-splitjoin" },
+  { import = "astrocommunity.editing-support.mini-splitjoin" }, -- gS to MiniSplitjoin.toggle() arguments (one/multiple lines) - does not inline EOL comments on join!
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 
