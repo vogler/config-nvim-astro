@@ -21,6 +21,8 @@ return {
   { import = "astrocommunity.colorscheme.sonokai" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
 
+  -- https://github.com/HakonHarnes/img-clip.nvim
+  { import = "astrocommunity.media.img-clip-nvim" }, -- <Leader>P to :PasteImage from clipboard (saves to assets/2025-06-17-15-40-53.png), supports drag and drop
   { import = "astrocommunity.media.vim-wakatime" },
   -- { import = "astrocommunity.color.headlines-nvim" },
 
