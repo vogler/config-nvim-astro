@@ -76,6 +76,8 @@ return {
   { import = "astrocommunity.editing-support.vim-move" },
   -- { import = "astrocommunity.motion.mini-move" }, -- alternative to the above?
   -- { import = "astrocommunity.editing-support.mini-operators" }, -- g= to evaluate, gx to exchange, gm to multiply, gr to replace, gs to sort; gx clashes with open URL -> remapped to go in astrocore.lua
+  -- https://github.com/jake-stewart/multicursor.nvim
+  -- { import = "astrocommunity.editing-support.multiple-cursors-nvim" }, -- <Leader>mj to add next match, ma to add all matches; which-key did not show anymore on <Leader> (but for other keys) after using this once
 
   { import = "astrocommunity.motion.before-nvim" }, -- [e ]e to go through edit locations
   -- { import = "astrocommunity.motion.flash-nvim" }, -- 
