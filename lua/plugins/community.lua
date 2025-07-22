@@ -26,6 +26,9 @@ return {
         -- https://github.com/OXY2DEV/markview.nvim/wiki/Presets
         headings = require("markview.presets").headings.arrowed, -- default 'marker' has background color for whole line which is too noisy; slanted was broken; arrowed looks a bit goofy, but at least it's easy to see the level
       },
+      experimental = {
+        check_rtp_message = false, -- needed after update to not show message "Your runtime path has been modified to fix load order." on start: https://github.com/OXY2DEV/markview.nvim/issues/365#issuecomment-3006654413
+      }
     },
     require("markview.extras.checkboxes").setup(),
   },
