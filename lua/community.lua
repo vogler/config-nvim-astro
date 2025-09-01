@@ -102,4 +102,5 @@ return {
   -- { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.pack.docker" },
   -- { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
+  { import = "astrocommunity.pack.vue" },
 }
