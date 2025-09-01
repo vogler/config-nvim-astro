@@ -21,6 +21,9 @@ return {
   { import = "astrocommunity.colorscheme.sonokai" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
 
+  -- vscode-style winbar: also show path to the current file (relative to working directory) before the default LSP breadcrumbs
+  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+
   -- https://github.com/HakonHarnes/img-clip.nvim
   { import = "astrocommunity.media.img-clip-nvim" }, -- <Leader>P to :PasteImage from clipboard (saves to assets/2025-06-17-15-40-53.png), supports drag and drop
   { import = "astrocommunity.media.vim-wakatime" },
