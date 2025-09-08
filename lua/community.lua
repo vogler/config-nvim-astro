@@ -25,6 +25,9 @@ return {
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   -- https://docs.astronvim.com/recipes/mappings/#enable-picker-lsp-mappings
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  -- https://docs.astronvim.com/recipes/ai/
+  -- { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" }, -- C-j accept line, C-l accept word, C-x/z next/prev suggestion, C-c dismiss
 
   -- https://github.com/HakonHarnes/img-clip.nvim
   { import = "astrocommunity.media.img-clip-nvim" }, -- <Leader>P to :PasteImage from clipboard (saves to assets/2025-06-17-15-40-53.png), supports drag and drop
@@ -38,7 +41,6 @@ return {
   -- https://github.com/OXY2DEV/markview.nvim normal-mode/hybrid/split preview for Markdown, Typst, LaTeX, HTML
   { import = "astrocommunity.markdown-and-latex.markview-nvim" }, -- :Markview (no subcmd: Toggle = preview globally), toggle (only buffer) splitToggle (preview in right vsplit), HybridDisable (disable hybrid mode (disables preview for node/line under cursor) since it changes indentation when moving around, w/o it will just show the raw text inline with the preview (no preview in insert mode anyway))
 
-  -- { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.file-explorer.oil-nvim" }, -- <Leader>O
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   { import = "astrocommunity.editing-support.mini-splitjoin" }, -- gS to MiniSplitjoin.toggle() arguments (one/multiple lines) - does not inline EOL comments on join!
