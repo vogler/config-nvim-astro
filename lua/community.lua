@@ -105,9 +105,10 @@ return {
   -- { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.yaml" },
   -- -- { import = "astrocommunity.pack.html-css" },
-  -- { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.tailwindcss" },
   -- { import = "astrocommunity.pack.markdown" },
-  -- { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.docker" },
   -- { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
   { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.php" },
 }
