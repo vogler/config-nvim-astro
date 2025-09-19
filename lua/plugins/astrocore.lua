@@ -108,6 +108,11 @@ return {
         ["<C-e>"] = { "<C-o>$", desc = "End of line" },
         ["<C-k>"] = { "<C-o>C", desc = "Change line" },
       },
+      v = {
+        -- https://stackoverflow.com/questions/676600/vim-search-and-replace-selected-text/5925566#5925566
+        -- vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+        ["<C-r>"] = { "\"hy:%s/<C-r>h//gc<left><left><left>", desc = "Replace visual selection in file (with confirmation)." },
+      }
     },
   },
 }
