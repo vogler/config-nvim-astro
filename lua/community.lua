@@ -25,6 +25,7 @@ return {
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   -- https://docs.astronvim.com/recipes/mappings/#enable-picker-lsp-mappings
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" }, -- disable inlay hints in insert mode
   -- https://docs.astronvim.com/recipes/ai/
   -- { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.completion.copilot-lua-cmp" }, -- C-j accept line, C-l accept word, C-x/z next/prev suggestion, C-c dismiss
