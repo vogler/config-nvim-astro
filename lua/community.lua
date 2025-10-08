@@ -45,7 +45,7 @@ return {
   { import = "astrocommunity.file-explorer.oil-nvim" }, -- <Leader>O
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   { import = "astrocommunity.editing-support.mini-splitjoin" }, -- gS to MiniSplitjoin.toggle() arguments (one/multiple lines) - does not inline EOL comments on join!
-  { import = "astrocommunity.editing-support.refactoring-nvim" },
+  { import = "astrocommunity.editing-support.refactoring-nvim" }, -- https://github.com/ThePrimeagen/refactoring.nvim generic actions for several languages, based off the Refactoring book by Martin Fowler
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 
   -- can stage hunks/buffer with <Leader>gs/S or via lazygit, but commit in lazygit is not great since the commit modal covers the staged changes; see https://github.com/jesseduffield/lazygit/discussions/4433#discussioncomment-13393080
@@ -98,8 +98,14 @@ return {
   -- { import = "astrocommunity.motion.portal-nvim" }, -- <Leader>o and i to show preview portal of where to jump
   { import = "astrocommunity.motion.tabout-nvim" }, -- <Tab> and <S-Tab> in insert mode to tab out from parens, quotes etc.
 
-  -- https://github.com/Zeioth/garbage-day.nvim Garbage collector that stops inactive LSP clients to free RAM
-  { import = "astrocommunity.lsp.garbage-day-nvim" },
+  -- { import = "astrocommunity.lsp.garbage-day-nvim" }, -- https://github.com/Zeioth/garbage-day.nvim Garbage collector that stops inactive LSP clients to free RAM
+  -- { import = "astrocommunity.lsp.inc-rename-nvim" }, -- live preview for <Leader>lr to rename symbol -- error: init.lua:550: attempt to index local 'err' (a nil value)
+  { import = "astrocommunity.lsp.actions-preview-nvim" }, -- preview for <Leader>la code actions
+  { import = "astrocommunity.lsp.ts-error-translator-nvim" }, -- simplify TS errors
+  -- { import = "astrocommunity.lsp.lsp-lens-nvim" }, -- display references/definitions info above functions -- TODO didn't work with vtsls
+  -- { import = "astrocommunity.lsp.lsp-signature-nvim" }, -- TODO takes up too much space in insert mode
+  { import = "astrocommunity.lsp.lsplinks-nvim" }, -- textDocument/documentLink support - TODO actual use case?
+  { import = "astrocommunity.lsp.lspsaga-nvim" }, -- hover doc, code action, rename, peek definition/implementation/references, show diagnostics in float
 
   -- { import = "astrocommunity.pack.bash" },
   -- { import = "astrocommunity.pack.typescript" },
