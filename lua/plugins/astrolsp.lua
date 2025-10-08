@@ -15,6 +15,7 @@ return {
       codelens = true, -- enable/disable codelens refresh on start
       inlay_hints = false, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
+      -- signature_help = true, -- appears behind completion menu when typing...
     },
     -- customize lsp formatting options
     formatting = {
@@ -45,6 +46,7 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      emmet_ls = { filetypes = "html" }, -- alternatively sort its snippets to the bottom of completion menu for TS(X) etc.
     },
     -- customize how language servers are attached
     handlers = {
