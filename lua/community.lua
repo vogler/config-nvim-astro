@@ -119,4 +119,5 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.typst" }, -- has :TypstPreviewToggle, but error on loading file due to clash with markview.nvim: treesitter.lua:431: Parser could not be created for buffer 1 and language "typst"
 }
