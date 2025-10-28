@@ -118,4 +118,5 @@ return {
   -- { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.pack.python-ruff" },
 }
