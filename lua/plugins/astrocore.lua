@@ -100,6 +100,26 @@ return {
     --
     --     -- setting a mapping to false will disable it
     --     -- ["<C-S>"] = false,
+        ["<Leader>f]"] = {
+          function()
+            local picker = require("snacks").picker.resume()
+            if not picker then return end
+            picker:show()
+            picker:action('list_down')
+            picker:action('confirm')
+          end,
+          desc = "Next result from last search"
+        },
+        ["<Leader>f["] = {
+          function()
+            local picker = require("snacks").picker.resume()
+            if not picker then return end
+            picker:show()
+            picker:action('list_up')
+            picker:action('confirm')
+          end,
+          desc = "Previous result from last search"
+        },
       },
       i = {
         -- missing readline keybindings in insert mode like in https://github.com/tpope/vim-rsi
