@@ -82,7 +82,11 @@ return {
           local repeated = vim.fn["repeat"]({""}, vim.v.count1)
           local line = vim.api.nvim_win_get_cursor(0)[1]
           vim.api.nvim_buf_set_lines(0, line, line, true, repeated)
-        end, desc = "Add blank line above" },
+        end, desc = "Add blank line below" },
+
+        -- paste as line above/below
+        ["[P"] = { ":put! +<CR>", desc = "Paste as line above" },
+        ["]P"] = { ":put +<CR>", desc = "Paste as line below" },
 
         -- did not work to map go to gx when using mini-operators
         -- ["go"] = { "gx", desc = "Open filepath or URI under cursor" }
