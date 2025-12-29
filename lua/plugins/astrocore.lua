@@ -106,7 +106,7 @@ return {
             if not picker then return end
             picker:show()
             picker:action('list_down')
-            picker:action('confirm')
+            vim.schedule(function() picker:action("confirm") end)
           end,
           desc = "Next result from last search"
         },
