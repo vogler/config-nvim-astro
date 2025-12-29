@@ -100,6 +100,11 @@ return {
     --
     --     -- setting a mapping to false will disable it
     --     -- ["<C-S>"] = false,
+        -- resume last snacks picker and go to next/previous result
+        -- does not work realiably since results move around...
+        -- via https://www.reddit.com/r/neovim/comments/1oq58oa/snackspickeritemsnvim_navigate_picker_results/
+        -- in picker: go to normal mode, <c-w>H to move results to left pane to go through them (still requires switching window, down, enter)
+        -- in picker: go to normal mode, <c-q> to send all results to quickfix list (opens as bottom window), then use ]q and [q to navigate them
         ["<Leader>f]"] = {
           function()
             local picker = require("snacks").picker.resume()
