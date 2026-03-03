@@ -88,7 +88,7 @@ return {
   -- { import = "astrocommunity.editing-support.multiple-cursors-nvim" }, -- <Leader>mj to add next match, ma to add all matches; which-key did not show anymore on <Leader> (but for other keys) after using this once
 
   { import = "astrocommunity.motion.before-nvim" }, -- [e ]e to go through edit locations
-  { import = "astrocommunity.motion.flash-nvim" }, -- s = search/jump, S = via Treesitter, r/R for remote operations like yr.., alternatives for s: xi or cl; used before for jumping: leap, sneak, EasyMotion
+  { import = "astrocommunity.motion.flash-nvim" }, -- s = search/jump, S = via Treesitter, r/R for remote operations like yr.., alternatives for s: xi or cl; used before for jumping: leap, sneak, EasyMotion; sadly the default config breaks all of nvim-surround's operator-pending mappings (ys, cs, ds) which is why we disable s in that mode.
   -- { import = "astrocommunity.motion.harpoon" }, -- <Space><Space>a to add mark, e to show menu, <C-p> and <C-n> to go through marks, <C-x> (clash with decrease number) to go to index of mark
   { import = "astrocommunity.motion.marks-nvim" }, -- shows marks in signcolumn, m; to toggle mark at current line (lowercase alpha), m] and m[ to go through marks, 'a to jump to mark a, dm<space> to delete all marks in buffer, uppercase marks for jumping accross buffers
   -- { import = "astrocommunity.motion.nvim-spider" }, -- change w, e, b to move by subwords and skip insignificant punctuation

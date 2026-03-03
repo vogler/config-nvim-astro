@@ -32,4 +32,62 @@ return {
     },
     require("markview.extras.checkboxes").setup(),
   },
+  {
+    -- https://github.com/AstroNvim/astrocommunity/blob/main/lua/astrocommunity/motion/flash-nvim/init.lua
+    -- This is the default config from above, but with s removed from operator-pending mode since it breaks nvim-surround's mappings (ys, cs, ds).
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      {
+        "AstroNvim/astrocore",
+        opts = {
+          mappings = {
+            x = {
+              ["s"] = {
+                function() require("flash").jump() end,
+                desc = "Flash",
+              },
+              ["R"] = {
+                function() require("flash").treesitter_search() end,
+                desc = "Treesitter Search",
+              },
+              ["S"] = {
+                function() require("flash").treesitter() end,
+                desc = "Flash Treesitter",
+              },
+            },
+            o = {
+              ["r"] = {
+                function() require("flash").remote() end,
+                desc = "Remote Flash",
+              },
+              ["R"] = {
+                function() require("flash").treesitter_search() end,
+                desc = "Treesitter Search",
+              },
+              -- ["s"] = {
+              --   function() require("flash").jump() end,
+              --   desc = "Flash",
+              -- },
+              ["S"] = {
+                function() require("flash").treesitter() end,
+                desc = "Flash Treesitter",
+              },
+            },
+            n = {
+              ["s"] = {
+                function() require("flash").jump() end,
+                desc = "Flash",
+              },
+              ["S"] = {
+                function() require("flash").treesitter() end,
+                desc = "Flash Treesitter",
+              },
+            },
+          },
+        },
+      },
+    },
+    opts = {},
+  }
 }
