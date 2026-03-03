@@ -37,7 +37,8 @@ return {
 
   -- { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.peek-nvim" }, -- :PeekOpen: Error: module not found
-  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" }, -- Live Markdown preview for Neovim with Mermaid diagrams, LaTeX math (KaTeX), scroll sync, and syntax highlighting.
+  -- There's also https://github.com/3rd/diagram.nvim which can render {mermaid, plantuml, d2, gnuplot} in nvim via image.nvim, but not yet in astrocommunity.
   -- { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   -- https://github.com/OXY2DEV/markview.nvim normal-mode/hybrid/split preview for Markdown, Typst, LaTeX, HTML
   { import = "astrocommunity.markdown-and-latex.markview-nvim" }, -- :Markview (no subcmd: Toggle = preview globally), toggle (only buffer) splitToggle (preview in right vsplit), HybridDisable (disable hybrid mode (disables preview for node/line under cursor) since it changes indentation when moving around, w/o it will just show the raw text inline with the preview (no preview in insert mode anyway))
