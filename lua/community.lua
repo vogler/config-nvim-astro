@@ -43,7 +43,7 @@ return {
   { import = "astrocommunity.markdown-and-latex.markview-nvim" }, -- :Markview (no subcmd: Toggle = preview globally), toggle (only buffer) splitToggle (preview in right vsplit), HybridDisable (disable hybrid mode (disables preview for node/line under cursor) since it changes indentation when moving around, w/o it will just show the raw text inline with the preview (no preview in insert mode anyway))
 
   { import = "astrocommunity.file-explorer.oil-nvim" }, -- <Leader>O
-  { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+  -- { import = "astrocommunity.bars-and-lines.vim-illuminate" }, -- loaded automatically? highlights word under cursor using either LSP, Tree-sitter, or regex matching; a-n/p to go through matches
   { import = "astrocommunity.editing-support.mini-splitjoin" }, -- gS to MiniSplitjoin.toggle() arguments (one/multiple lines) - does not inline EOL comments on join!
   { import = "astrocommunity.editing-support.refactoring-nvim" }, -- https://github.com/ThePrimeagen/refactoring.nvim generic actions for several languages, based off the Refactoring book by Martin Fowler
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
@@ -77,7 +77,7 @@ return {
   -- https://github.com/stevearc/overseer.nvim more basic? no language defaults, just lists e.g. npm run scripts, but has watch mode to rerun task on save
   { import = "astrocommunity.code-runner.overseer-nvim" }, -- <Leader>M for :Overseer{Toggle,RunCmd,Run,QuickAction,TaskAction,Info}
 
-  { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
+  -- { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
   -- { import = "astrocommunity.utility.nvim-toggler" }, -- <Leadeer>i to toggle word under cursor (defaults: true/false, yes/no, on/off, enable/disable, left/right, up/down, !=/==)
   { import = "astrocommunity.editing-support.dial-nvim" },
@@ -101,7 +101,7 @@ return {
   -- { import = "astrocommunity.lsp.garbage-day-nvim" }, -- https://github.com/Zeioth/garbage-day.nvim Garbage collector that stops inactive LSP clients to free RAM
   -- { import = "astrocommunity.lsp.inc-rename-nvim" }, -- live preview for <Leader>lr to rename symbol -- error: init.lua:550: attempt to index local 'err' (a nil value)
   { import = "astrocommunity.lsp.actions-preview-nvim" }, -- preview for <Leader>la code actions
-  { import = "astrocommunity.lsp.ts-error-translator-nvim" }, -- simplify TS errors
+  -- { import = "astrocommunity.lsp.ts-error-translator-nvim" }, -- simplify TS errors
   -- { import = "astrocommunity.lsp.lsp-lens-nvim" }, -- display references/definitions info above functions -- TODO didn't work with vtsls
   -- { import = "astrocommunity.lsp.lsp-signature-nvim" }, -- TODO takes up too much space in insert mode
   { import = "astrocommunity.lsp.lsplinks-nvim" }, -- textDocument/documentLink support - TODO actual use case?
@@ -118,6 +118,7 @@ return {
   -- { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.php" },
-  { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.python.ruff" },
   { import = "astrocommunity.pack.typst" }, -- has :TypstPreviewToggle, but error on loading file due to clash with markview.nvim: treesitter.lua:431: Parser could not be created for buffer 1 and language "typst"
 }
