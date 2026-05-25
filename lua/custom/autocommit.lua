@@ -1,4 +1,5 @@
 -- Auto commit on file save with modification and creation times for new files
+-- `touch .git/autocommit` to enable
 -- https://www.perplexity.ai/search/how-to-automatically-commit-wi-DMh7rcBmR4W85tfIxZC2mw#3
 local function auto_commit_update_with_times()
   -- Check for .git/autocommit marker file

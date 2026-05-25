@@ -108,8 +108,8 @@ return {
   { import = "astrocommunity.lsp.lsplinks-nvim" }, -- textDocument/documentLink support - TODO actual use case?
   { import = "astrocommunity.lsp.lspsaga-nvim" }, -- hover doc, code action, rename, peek definition/implementation/references, show diagnostics in float
 
-  -- { import = "astrocommunity.pack.bash" },
-  -- { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.json" },
   -- { import = "astrocommunity.pack.yaml" },
   -- -- { import = "astrocommunity.pack.html-css" },
@@ -117,8 +117,8 @@ return {
   -- { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.docker" },
   -- { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
-  { import = "astrocommunity.pack.vue" },
-  { import = "astrocommunity.pack.php" },
+  -- { import = "astrocommunity.pack.vue" },
+  -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.python.ruff" },
   { import = "astrocommunity.pack.typst" }, -- has :TypstPreviewToggle, but error on loading file due to clash with markview.nvim: treesitter.lua:431: Parser could not be created for buffer 1 and language "typst"
