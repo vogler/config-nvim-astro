@@ -49,7 +49,7 @@ return {
   { import = "astrocommunity.editing-support.refactoring-nvim" }, -- https://github.com/ThePrimeagen/refactoring.nvim generic actions for several languages, based off the Refactoring book by Martin Fowler
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 
-  -- can stage hunks/buffer with <Leader>gs/S or via lazygit, but commit in lazygit is not great since the commit modal covers the staged changes; see https://github.com/jesseduffield/lazygit/discussions/4433#discussioncomment-13393080
+  -- can stage hunks/buffer with <Leader>gs/S or via lazygit, but commit in lazygit is not great since the commit modal covers the staged changes behind it; see https://github.com/jesseduffield/lazygit/discussions/4433#discussioncomment-13393080
   -- was using https://github.com/tpope/vim-fugitive in my old .vimrc with the following:
     -- " just commit what is already staged
     -- nmap <leader>c :Git commit -v --quiet<cr>
@@ -67,7 +67,7 @@ return {
   -- https://github.com/SuperBo/fugit2.nvim/wiki/%E2%8C%A8%EF%B8%8F-Usage-and-Keymap
   -- { import = "astrocommunity.git.fugit2-nvim" }, -- <Leader>gF; but also adds <Leader>gn for new commit
   -- https://github.com/sindrets/diffview.nvim
-  { import = "astrocommunity.git.diffview-nvim" }, -- :DiffviewOpen, :DiffviewFileHistory %
+  { import = "astrocommunity.git.diffview-nvim" }, -- :DiffviewOpen, :DiffviewFileHistory %; ]x [x to go through conflicts (same as git-conflict.nvim or resolve.nvim, but this does more besides just conflicts)
   -- https://github.com/isakbm/gitgraph.nvim
   -- { import = "astrocommunity.git.gitgraph-nvim" }, -- <Leader>g| - uses diffview for commits, but can't use like this since it replaces buffer instead of opening a float; also neogit's log graph is basically the same except that it doesn't use diffview, i.e. no syntax highlighting
   -- https://github.com/chrisgrieser/nvim-tinygit some nice ideas, but UI not great
