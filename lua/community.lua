@@ -26,8 +26,10 @@ return {
   -- https://docs.astronvim.com/recipes/mappings/#enable-picker-lsp-mappings
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" }, -- disable inlay hints in insert mode
+  { import = "astrocommunity.recipes.ai" },
+
   -- https://docs.astronvim.com/recipes/ai/
-  -- { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.ai.avante-nvim" }, -- 
   { import = "astrocommunity.completion.copilot-lua-cmp" }, -- C-j accept line, C-l accept word, C-x/z next/prev suggestion, C-c dismiss
 
   -- https://github.com/HakonHarnes/img-clip.nvim
