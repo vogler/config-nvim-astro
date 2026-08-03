@@ -1,3 +1,7 @@
+-- 1. Suppress post-commit "Press ENTER" messages
+vim.opt.shortmess:append("F")
+
+-- 2. Auto-close Diffview when saving/closing the commit message buffer
 vim.api.nvim_create_autocmd("BufDelete", {
   pattern = "COMMIT_EDITMSG",
   callback = function()
@@ -10,18 +14,23 @@ vim.api.nvim_create_autocmd("BufDelete", {
   end,
 })
 
+-- 3. Plugin Specification
 return {
   "sindrets/diffview.nvim",
   dependencies = { "tpope/vim-fugitive" },
+
+  -- Global shortcut to open Diffview (<leader>gv)
+  keys = {
+    { "<leader>gv", "<cmd>DiffviewOpen<CR>", desc = "Open Diffview" },
+  },
+
   opts = {
     keymaps = {
       file_panel = {
-        {
-          "n",
-          "cc",
-          "<cmd>silent tab Git commit -v<CR>",
-          { desc = "Commit staged changes in a full tab", silent = true },
-        },
+        -- Press 'cc' in file tree to commit staged files in a full tab
+        { "n", "cc", "<cmd>silent tab Git commit -v<CR>", { desc = "Commit staged changes", silent = true } },
+        -- Press 'q' anywhere in file tree to close Diffview instantly
+        { "n", "q", "<cmd>DiffviewClose<CR>", { desc = "Close Diffview" } },
       },
     },
   },
