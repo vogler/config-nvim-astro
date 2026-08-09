@@ -46,11 +46,49 @@ return {
         -- signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
         scrolloff = 3,
+        autoread = true, -- automatically reload files changed outside of Neovim
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+      },
+    },
+    -- Configure autocommands through AstroCore
+    -- Note: If you want instant real-time reloading for unfocused open splits without needing cursor or focus events, consider https://github.com/diegok/live-autoread.nvim
+    autocmds = {
+      auto_checktime = {
+        {
+          event = { "FocusGained", "BufEnter", "CursorHold", "CursorHoldI", "TermClose" },
+          desc = "Automatically check if files changed on disk",
+          callback = function()
+            if vim.fn.getcmdwintype() == "" then
+              vim.cmd "checktime"
+            end
+          end,
+        },
+        {
+          event = "FileChangedShellPost",
+          desc = "Notify when a file is automatically reloaded from disk",
+          callback = function(args)
+            vim.notify(
+              string.format("File reloaded from disk: %s", vim.fn.fnamemodify(args.file, ":t")),
+              vim.log.levels.INFO,
+              { title = "Auto-Reload" }
+            )
+          end,
+        },
+        {
+          event = "FileChangedShell",
+          desc = "Warn when a file changed on disk but has unsaved local changes",
+          callback = function(args)
+            vim.notify(
+              string.format("File changed on disk, but has unsaved changes: %s", vim.fn.fnamemodify(args.file, ":t")),
+              vim.log.levels.WARN,
+              { title = "File Conflict" }
+            )
+          end,
+        },
       },
     },
     -- Mappings can be configured through AstroCore as well.
