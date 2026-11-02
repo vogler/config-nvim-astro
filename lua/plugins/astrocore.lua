@@ -58,6 +58,20 @@ return {
     -- Configure autocommands through AstroCore
     -- Note: If you want instant real-time reloading for unfocused open splits without needing cursor or focus events, consider https://github.com/diegok/live-autoread.nvim
     autocmds = {
+      restore_remote_cursor = {
+        {
+          event = "BufReadPost",
+          pattern = { "scp://*", "sftp://*", "ftp://*", "rcp://*", "rsync://*", "dav://*", "davs://*" },
+          desc = "Restore last cursor position for remote netrw files from shada",
+          callback = function(args)
+            pcall(vim.cmd.rshada, { bang = true })
+            local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
+            if mark[1] > 0 and mark[1] <= vim.api.nvim_buf_line_count(args.buf) then
+              pcall(vim.api.nvim_win_set_cursor, 0, mark)
+            end
+          end,
+        },
+      },
       auto_checktime = {
         {
           event = { "FocusGained", "BufEnter", "CursorHold", "CursorHoldI", "TermClose" },
