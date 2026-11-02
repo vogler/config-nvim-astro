@@ -22,7 +22,7 @@ require("lazy").setup({
       -- disable some rtp plugins, add more to your liking
       disabled_plugins = {
         "gzip",
-        "netrwPlugin",
+        -- "netrwPlugin", -- needed for editing remote files via scp://, sftp://, etc.
         "tarPlugin",
         "tohtml",
         "zipPlugin",

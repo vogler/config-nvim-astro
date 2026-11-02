@@ -52,6 +52,7 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        netrw_silent = 1, -- no "Press ENTER or type command to continue" when editing a file via scp, e.g. nvim scp://pi@rpi3.voglerr.de/dash.log
       },
     },
     -- Configure autocommands through AstroCore
