@@ -29,7 +29,9 @@ return {
   { import = "astrocommunity.recipes.ai" },
 
   -- https://docs.astronvim.com/recipes/ai/
-  { import = "astrocommunity.ai.avante-nvim" }, -- 
+  -- { import = "astrocommunity.ai.avante-nvim" }, -- Cursor-like AI IDE sidebar/chat & inline code edits (<Leader>A); disabled because it compiles Rust crates via cargo/make on updates and frequently breaks
+  -- { import = "astrocommunity.ai.codecompanion-nvim" }, -- Pure-Lua LLM chat & inline coding assistant (<Leader>A); disabled because its ACP adapter expects gemini-cli rather than agy
+  { import = "astrocommunity.ai.sidekick-nvim" }, -- Pure-Lua Next Edit Suggestions (NES via Copilot LSP on <C-n>) & integrated AI CLI terminal (<Leader>A / <C-.>) for agy, claude, opencode
   { import = "astrocommunity.completion.copilot-lua-cmp" }, -- C-j accept line, C-l accept word, C-x/z next/prev suggestion, C-c dismiss
 
   -- https://github.com/HakonHarnes/img-clip.nvim

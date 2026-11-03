@@ -89,5 +89,37 @@ return {
       },
     },
     opts = {},
-  }
+  },
+  {
+    "folke/sidekick.nvim",
+    dependencies = {
+      {
+        "AstroNvim/astrocore",
+        opts = {
+          mappings = {
+            n = {
+              -- Use <C-n> instead of <Tab> since <Tab> is mapped to "Next buffer" in astrocore.lua
+              ["<C-n>"] = {
+                function() require("sidekick").nes_jump_or_apply() end,
+                desc = "Goto/Apply Next Edit Suggestion",
+              },
+            },
+          },
+        },
+      },
+    },
+    opts = {
+      nes = {
+        trigger = {
+          -- Include LspAttach so Copilot's edit-history tracker starts before the first edit
+          events = { "LspAttach", "ModeChanged i:n", "TextChanged", "User SidekickNesDone" },
+        },
+      },
+      cli = {
+        tools = {
+          agy = { cmd = { "agy" } },
+        },
+      },
+    },
+  },
 }
