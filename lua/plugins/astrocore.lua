@@ -120,9 +120,9 @@ return {
         -- ["<C-S>"] = false,
 
         ["-"] = { function() require("neo-tree.command").execute({ action = "focus", position = "current" }) end, desc = "Open Neotree in current window (netrw style)" },
-        -- navigate buffer tabs
-        ["<Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["<S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        -- navigate buffer tabs (expr = false prevents plugins like sidekick-nvim from leaking expr = true and triggering E565)
+        ["<Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer", expr = false },
+        ["<S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer", expr = false },
 
         -- missing insert blank lines above/below w/o leaving normal mode like in https://github.com/tpope/vim-unimpaired
         -- copied from lua port: https://github.com/tummetott/unimpaired.nvim
