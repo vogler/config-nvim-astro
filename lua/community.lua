@@ -97,7 +97,7 @@ return {
   -- { import = "astrocommunity.motion.harpoon" }, -- <Space><Space>a to add mark, e to show menu, <C-p> and <C-n> to go through marks, <C-x> (clash with decrease number) to go to index of mark
   { import = "astrocommunity.motion.marks-nvim" }, -- shows marks in signcolumn, m; to toggle mark at current line (lowercase alpha), m] and m[ to go through marks, 'a to jump to mark a, dm<space> to delete all marks in buffer, uppercase marks for jumping accross buffers
   -- { import = "astrocommunity.motion.nvim-spider" }, -- change w, e, b to move by subwords and skip insignificant punctuation
-  { import = "astrocommunity.motion.nvim-surround" }, -- add: ys{motion}{char}, del: ds{char}, change: cs{from}{to}
+  { import = "astrocommunity.motion.nvim-surround" }, -- add: ys{motion}{char}, del: ds{char}, change: cs{from}{to}; add (visual): S{char}
   -- { import = "astrocommunity.motion.nvim-tree-pairs" }, -- change % to jump between treesitter nodes and only fallback to syntactic mode if treesitter not available
   { import = "astrocommunity.motion.vim-matchup" }, -- same as above but also jumps between text?
   -- { import = "astrocommunity.motion.portal-nvim" }, -- <Leader>o and i to show preview portal of where to jump
