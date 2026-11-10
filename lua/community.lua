@@ -110,7 +110,7 @@ return {
   -- { import = "astrocommunity.lsp.lsp-lens-nvim" }, -- display references/definitions info above functions -- TODO didn't work with vtsls
   -- { import = "astrocommunity.lsp.lsp-signature-nvim" }, -- TODO takes up too much space in insert mode
   { import = "astrocommunity.lsp.lsplinks-nvim" }, -- textDocument/documentLink support - TODO actual use case?
-  { import = "astrocommunity.lsp.lspsaga-nvim" }, -- hover doc, code action, rename, peek definition/implementation/references, show diagnostics in float
+  -- { import = "astrocommunity.lsp.lspsaga-nvim" }, -- hover doc, code action, rename, peek definition/implementation/references, show diagnostics in float - disabled in favor of integrated aerial.nvim which has nicer shortcuts (see ?) and is integrated better
 
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.typescript" },
